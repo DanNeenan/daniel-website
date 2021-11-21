@@ -1,3 +1,5 @@
+import Sidebar from "./Sidebar"
+
 const Layout = ({ children }) => {
   return (
     <div className="h-screen">
@@ -6,7 +8,12 @@ const Layout = ({ children }) => {
           <div>Daniel Neenan</div>
           <div>A little about me</div>
         </div>
-        <div className="bg-blue-100 flex flex-grow p-8">{children}</div>
+        <div className="bg-blue-100 flex flex-grow">
+          <div className="flex">
+            <Sidebar />
+            <div className="p-8">{children}</div>
+          </div>
+        </div>
       </div>
     </div>
   )

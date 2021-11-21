@@ -1,0 +1,12 @@
+[
+  {
+    "key": "Home",
+    "label": "Home",
+    "to": "/"
+  },
+  {
+    "key": "cv",
+    "label": "CV",
+    "to": "/cv"
+  }
+]
