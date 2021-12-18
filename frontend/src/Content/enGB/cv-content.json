@@ -1,66 +1,76 @@
-[
-  {
-    "key": "foreword",
-    "content": [
-      {
-        "key": "opener",
-        "body": [
-          "A mathematically-minded full-stack web app developer with 4 years of industry experience looking for a new, challenging role. I have experience in a broad range of technologies including Javascript, AWS, and Swift. I'm a fast learner that thrives when facing new challenges."
-        ]
-      }
-    ]
-  },
-  {
-    "key": "employment",
-    "title": "Employment",
-    "content": [
-      {
-        "key": "payzip",
-        "title": ["Web app developer November 2019 - November 2021"],
-        "subtitle": "Payzip, Cardiff",
-        "body": [
-          "Over the last two years I have been working full time with a small team on the second version of the Payzip application. I have been developing the app using a dockerised environment and working in Javascript using React and NodeJS.",
-          "During the course of the project I implemented the use of a finite-state machine for handling frontend events and state and also integrated the backend with a number of external services, such as Trello, Slack and Postmark.",
-          "With a small team we were able to work to an agile methodology, meaning I was involved in feature planning and retrospective meetings. Using the knowledge I had gained over course of working for Automise and Payzip I was able convey the limitations that certain features would have as well propose effective changes to the feature."
-        ]
-      },
-      {
-        "key": "automise",
-        "title": ["Junior web app developer October 2017 - November 2019"],
-        "subtitle": "Automise, Cardiff",
-        "body": [
-          "When joining Automise I had minimal experience in web app development. I upskilled quickly in PHP and .NET and within 2 months I was using the skills I had developed to maintain products for South Wales Football Association, Interserve PLC and the Automise's own product, Payzip. As we brought on new clients I had the opportunity to work in Javascript using React, React Native and VueJS frameworks to cater for their projects needs.",
-          "Inbetween clients, I worked on creating a support tool to help manage the Payzip app. Written in Golang, I created an API that would take a route query and transform it into an MSSQL query. I also helped develop an app called SmartTracker, an iOS native app that can track multiple goals and show the user if they would meet their target and give them the projected final value."
-        ]
-      }
-    ]
-  },
-  {
-    "key": "education",
-    "title": "Education",
-    "content": [
-      {
-        "key": "uni",
-        "title": [
-          "BSc (Hons) Applied Mathematics 2015-2017",
-          "BSc (Hons) Mathematics and Physics 2013-2015"
-        ],
-        "subtitle": "Cardiff University"
-      },
-      {
-        "key": "college",
-        "title": [
-          "A levels: Maths (A), Physics (B), Further Maths (C) 2010-2013"
-        ],
-        "subtitle": "Bridgwater College"
-      },
-      {
-        "key": "secondary",
-        "title": [
-          "8 GCSE's at grades A-C, including Maths and English 2005-2010"
-        ],
-        "subtitle": "Chilton Trinity Technology College"
-      }
-    ]
-  }
-]
+{
+  "name": "CV",
+  "language": "enGB",
+  "body": [
+    {
+      "key": "foreword",
+      "content": [
+        {
+          "key": "opener",
+          "type": "text",
+          "body": [
+            "A mathematically-minded full-stack web app developer with 4 years of industry experience looking for a new, challenging role. I have experience in a broad range of technologies including Javascript, AWS, and Swift. I'm a fast learner that thrives when facing new challenges."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "employment",
+      "title": "Employment",
+      "content": [
+        {
+          "key": "payzip",
+          "type": "text",
+          "title": ["Web app developer November 2019 - November 2021"],
+          "subtitle": "Payzip, Cardiff",
+          "body": [
+            "Over the last two years I have been working full time with a small team on the second version of the Payzip application. I have been developing the app using a dockerised environment and working in Javascript using React and NodeJS.",
+            "During the course of the project I implemented the use of a finite-state machine for handling frontend events and state and also integrated the backend with a number of external services, such as Trello, Slack and Postmark.",
+            "With a small team we were able to work to an agile methodology, meaning I was involved in feature planning and retrospective meetings. Using the knowledge I had gained over course of working for Automise and Payzip I was able convey the limitations that certain features would have as well propose effective changes to the feature."
+          ]
+        },
+        {
+          "key": "automise",
+          "title": ["Junior web app developer October 2017 - November 2019"],
+          "subtitle": "Automise, Cardiff",
+          "type": "text",
+          "body": [
+            "When joining Automise I had minimal experience in web app development. I upskilled quickly in PHP and .NET and within 2 months I was using the skills I had developed to maintain products for South Wales Football Association, Interserve PLC and the Automise's own product, Payzip. As we brought on new clients I had the opportunity to work in Javascript using React, React Native and VueJS frameworks to cater for their projects needs.",
+            "Inbetween clients, I worked on creating a support tool to help manage the Payzip app. Written in Golang, I created an API that would take a route query and transform it into an MSSQL query. I also helped develop an app called SmartTracker, an iOS native app that can track multiple goals and show the user if they would meet their target and give them the projected final value."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "education",
+      "title": "Education",
+      "content": [
+        {
+          "key": "uni",
+          "type": "text",
+          "title": [
+            "BSc (Hons) Applied Mathematics 2015-2017",
+            "BSc (Hons) Mathematics and Physics 2013-2015"
+          ],
+          "subtitle": "Cardiff University"
+        },
+        {
+          "key": "college",
+          "type": "text",
+          "title": [
+            "A levels: Maths (A), Physics (B), Further Maths (C) 2010-2013"
+          ],
+          "subtitle": "Bridgwater College"
+        },
+        {
+          "key": "secondary",
+          "type": "text",
+          "title": [
+            "8 GCSE's at grades A-C, including Maths and English 2005-2010"
+          ],
+          "subtitle": "Chilton Trinity Technology College"
+        }
+      ]
+    }
+  ]
+}

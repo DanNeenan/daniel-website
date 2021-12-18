@@ -16,11 +16,28 @@ services:
       - 3000:3000
 
   backend:
-    image: backend
+    container_name: backend
     build:
-      context: backend
-      dockerfile: ./Dockerfile
+      context: ./backend
+      dockerfile: Dockerfile
+    volumes:
+      - "./backend:/app"
     environment:
       NODE_ENV: development
+      CHOKIDAR_USEPOLLING: "true"
     ports:
       - 3001:3001
+    links:
+      - mongodb
+
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    environment:
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - ./mongodb/database:/data/db
+    ports:
+      - 27017:27017
+    restart: unless-stopped

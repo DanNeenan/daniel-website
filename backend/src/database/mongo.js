@@ -1,23 +1,15 @@
-import { MongoMemoryServer } from "mongodb-memory-server"
-import { MongoClient } from "mongodb"
+import mongoose from "mongoose"
 
 let database = null
 
-async function startDatabase() {
-  const mongo = new MongoMemoryServer()
-  const mongoDBURL = await mongo.getConnectionString()
-  const connection = await MongoClient.connect(mongoDBURL, {
-    useNewUrlParser: true,
-  })
-  database = connection.db()
-}
+export const startDatabase = () => {
+  const connection = "mongodb://mongodb:27017/mongodb"
 
-async function getDatabase() {
-  if (!database) await startDatabase()
+  database = mongoose.connect(connection, { useNewUrlParser: true })
   return database
 }
 
-export default {
-  getDatabase,
-  startDatabase,
+export const getDatabase = async () => {
+  if (!database) await startDatabase()
+  return database
 }
