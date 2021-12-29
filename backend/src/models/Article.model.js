@@ -7,6 +7,13 @@ const articleSchema = new mongoose.Schema({
   language: {
     type: String,
   },
+  synopsis: {
+    type: String,
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
   body: {
     type: [
       {

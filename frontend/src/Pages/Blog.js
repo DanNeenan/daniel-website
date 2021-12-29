@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
 import Content from "../Components/Content"
 import { useApiHook } from "../hooks/api"
 
-const CV = () => {
+const Blog = () => {
+  const { id } = useParams()
   const [data, setData] = useState()
   const api = useApiHook()
 
   useEffect(() => {
-    api.get("/cv").then((res) => {
+    api.get(`/article/${id}`).then((res) => {
       console.log(res)
       setData(res.data)
     })
@@ -23,4 +25,4 @@ const CV = () => {
   )
 }
 
-export default CV
+export default Blog

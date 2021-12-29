@@ -1,0 +1,42 @@
+version: "3.4"
+
+services:
+  frontend:
+    container_name: frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.test
+    volumes:
+      - "./frontend:/app"
+    env_file: ./frontend/.env
+    environment:
+      NODE_ENV: development
+      CHOKIDAR_USEPOLLING: "true"
+    ports:
+      - 3000:3000
+
+  backend:
+    container_name: backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.test
+    volumes:
+      - "./backend:/app"
+    environment:
+      NODE_ENV: development
+      CHOKIDAR_USEPOLLING: "true"
+    ports:
+      - 3001:3001
+    links:
+      - mongodb_test
+
+  mongodb_test:
+    image: mongo
+    environment:
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - ./mongodb_test/database:/data/db
+    ports:
+      - 27017:27017
+    restart: unless-stopped

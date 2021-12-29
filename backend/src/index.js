@@ -22,7 +22,7 @@ app.use(cors())
 
 app.use(morgan("combined"))
 
-app.get("/", async (req, res) => {
+app.get("/article", async (req, res) => {
   const article = await getArticles(req.query.search)
   res.send(article)
 })

@@ -5,6 +5,11 @@
     "to": "/"
   },
   {
+    "key": "blog",
+    "label": "Blog",
+    "to": "/blog"
+  },
+  {
     "key": "cv",
     "label": "CV",
     "to": "/cv"

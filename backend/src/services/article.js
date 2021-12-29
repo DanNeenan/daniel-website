@@ -9,7 +9,7 @@ export const insertArticle = async (article) => {
   const database = await getDatabase()
   console.log(database.connection)
   const data = new Article(article)
-  await database.connection.collection(collectionName).insertOne(data)
+  await database.connection.collection(collectionName).insertOne({ data })
 
   return data
 }
